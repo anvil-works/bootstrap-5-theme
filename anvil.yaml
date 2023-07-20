@@ -2,7 +2,9 @@ allow_embedding: false
 package_name: Bootstrap
 name: Bootstrap 5 Theme
 startup_form: Form1
-native_deps: {head_html: <script type="module" src="_/theme/anvil-theme.js"></script>}
+native_deps: {head_html: '<script type="module" src="_/theme/anvil-theme.js"></script>
+
+    <link rel="stylesheet" href="_/theme/anvil-theme.css">'}
 runtime_options:
   version: 3
   client_version: '3'
