@@ -5,7 +5,7 @@ components:
   type: form:Button
   layout_properties: {grid_position: 'WAJQXW,OJBDYW'}
 - name: button_2
-  properties: {}
+  properties: {text: ''}
   type: form:Button
   layout_properties: {grid_position: 'HFBAZG,JGDZHU'}
 - name: button_3
