@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from 'react-bootstrap/Button';
-import { registerReactComponent } from "@anvil-works/anvil-react";
+import { registerReactComponent, useActions } from "@anvil-works/anvil-react";
 import { useDesignerApi, useInlineEditRef } from "@anvil-works/anvil-react/designer";
 
 registerReactComponent({
@@ -19,14 +19,29 @@ registerReactComponent({
         name: "outline",
         type: "boolean",
         defaultValue: false,
+    }, {
+        name: "size",
+        type: "enum",
+        options: ["small", "medium", "large"],
+        defaultValue: "medium",
+    }, {
+        name: "enabled",
+        type: "boolean",
+        defaultValue: true,
     }],
-    events: [],
+    events: [{
+        name: "click",
+    }],
     component: ({
-        properties: {text, variant, outline},
+        properties: {text, variant, outline, size, enabled},
     }, ref) => {
         const { designName } = useDesignerApi();
+        const { raiseEvent } = useActions();
         return <Button ref={useInlineEditRef("text", ref)}
                        variant={`${outline ? 'outline-' : ''}${variant}`}
+                       size={size === "medium" ? undefined : size}
+                       disabled={!enabled}
+                       onClick={() => raiseEvent("click", {})}
         >
             {text || designName}
         </Button>
