@@ -1,5 +1,7 @@
 import {sassPlugin} from 'esbuild-sass-plugin';
 
+import ImportGlobPlugin from 'esbuild-plugin-import-glob';
+
 export default {
     entryPoints: ['js/index.tsx'],
     bundle: true,
@@ -13,5 +15,5 @@ export default {
         '.ts': 'tsx',
     },
     metafile: true,
-    plugins: [sassPlugin({})]
+    plugins: [ImportGlobPlugin.default(), sassPlugin({})]
 }
