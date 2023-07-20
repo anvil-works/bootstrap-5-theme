@@ -10,12 +10,25 @@ registerReactComponent({
         name: "text",
         type: "string",
         defaultValue: '',
+    }, {
+        name: "variant",
+        type: "enum",
+        options: ["primary","secondary","success","warning","danger","info","light","dark","link"],
+        defaultValue: "primary",
+    }, {
+        name: "outline",
+        type: "boolean",
+        defaultValue: false,
     }],
     events: [],
     component: ({
-        properties: {text},
+        properties: {text, variant, outline},
     }, ref) => {
         const { designName } = useDesignerApi();
-        return <Button ref={useInlineEditRef("text", ref)}>{text || designName}</Button>
+        return <Button ref={useInlineEditRef("text", ref)}
+                       variant={`${outline ? 'outline-' : ''}${variant}`}
+        >
+            {text || designName}
+        </Button>
     }
 })
