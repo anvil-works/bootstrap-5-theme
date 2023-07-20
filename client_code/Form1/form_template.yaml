@@ -1,7 +1,9 @@
 container: {type: ColumnPanel}
 components:
 - name: button_1
-  properties: {text: This is a button, outline: false, variant: primary, size: large}
+  properties: {text: This is a button, outline: false, variant: primary, size: medium,
+    enabled: true}
   type: form:Button
   layout_properties: {grid_position: 'CTFRKE,VOCXYB'}
+  event_bindings: {click: button_1_click}
 is_package: true
