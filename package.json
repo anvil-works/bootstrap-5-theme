@@ -9,7 +9,7 @@
         "watch": "node scripts/watch.mjs"
     },
     "dependencies": {
-        "@anvil-works/anvil-react": "^0.2.3",
+        "@anvil-works/anvil-react": "^0.2.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-bootstrap": "2.8.0",
