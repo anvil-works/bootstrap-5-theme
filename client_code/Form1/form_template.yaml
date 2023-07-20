@@ -4,4 +4,12 @@ components:
   properties: {}
   type: form:Button
   layout_properties: {grid_position: 'WAJQXW,OJBDYW'}
+- name: button_2
+  properties: {}
+  type: form:Button
+  layout_properties: {grid_position: 'HFBAZG,JGDZHU'}
+- name: button_3
+  properties: {text: 'Hello?'}
+  type: Button
+  layout_properties: {grid_position: 'STDDFF,KZEHSK'}
 is_package: true
