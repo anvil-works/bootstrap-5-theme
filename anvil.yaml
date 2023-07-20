@@ -1,5 +1,5 @@
 allow_embedding: false
-package_name: Bootstrap_5_Theme
+package_name: Bootstrap
 name: Bootstrap 5 Theme
 startup_form: Form1
 native_deps: {head_html: <script type="module" src="_/theme/anvil-theme.js"></script>}
