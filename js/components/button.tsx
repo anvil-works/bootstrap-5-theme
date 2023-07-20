@@ -48,7 +48,7 @@ registerReactComponent({
                        variant={`${outline ? 'outline-' : ''}${variant}`}
                        size={_size}
                        disabled={!enabled}
-                       onClick={() => raiseEvent("click", {})}
+                       onClick={() => {console.log("CLICK");raiseEvent("click", {})}}
         >
             {text || designName}
         </Button>
