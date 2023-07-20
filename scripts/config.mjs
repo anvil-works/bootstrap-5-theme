@@ -1,3 +1,4 @@
+import {sassPlugin} from 'esbuild-sass-plugin';
 
 export default {
     entryPoints: ['js/index.tsx'],
@@ -12,4 +13,5 @@ export default {
         '.ts': 'tsx',
     },
     metafile: true,
+    plugins: [sassPlugin({})]
 }
