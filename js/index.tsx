@@ -17,7 +17,7 @@ registerReactComponent({
     component: ({
         properties: {text},
     }, ref) => {
-        const { inDesigner, designName } = useDesignerApi();
+        const { designName } = useDesignerApi();
         return <Button>{text || designName}</Button>
     }
 })
