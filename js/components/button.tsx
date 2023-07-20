@@ -37,9 +37,16 @@ registerReactComponent({
     }, ref) => {
         const { designName } = useDesignerApi();
         const { raiseEvent } = useActions();
+        const _size = React.useMemo(() => {
+            switch(size) {
+                case "small": return "sm";
+                case "large": return "lg";
+                default: return undefined;
+            }
+        }, [size]);
         return <Button ref={useInlineEditRef("text", ref)}
                        variant={`${outline ? 'outline-' : ''}${variant}`}
-                       size={size === "medium" ? undefined : size}
+                       size={_size}
                        disabled={!enabled}
                        onClick={() => raiseEvent("click", {})}
         >
