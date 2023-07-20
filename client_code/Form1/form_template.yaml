@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: button_1
-  properties: {}
+  properties: {text: This is a button}
   type: form:Button
   layout_properties: {grid_position: 'CTFRKE,VOCXYB'}
 is_package: true
