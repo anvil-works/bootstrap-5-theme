@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Button from 'react-bootstrap/Button';
 import { registerReactComponent } from "@anvil-works/anvil-react";
-import { useDesignerApi } from "@anvil-works/anvil-react/designer";
+import { useDesignerApi, useInlineEditRef } from "@anvil-works/anvil-react/designer";
 
 registerReactComponent({
     name: "Bootstrap.Button",
@@ -16,6 +16,6 @@ registerReactComponent({
         properties: {text},
     }, ref) => {
         const { designName } = useDesignerApi();
-        return <Button>{text || designName}</Button>
+        return <Button ref={useInlineEditRef("text", ref)}>{text || designName}</Button>
     }
 })
